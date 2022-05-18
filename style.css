@@ -1,5 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;800&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     text-decoration: none;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+:root {
+    --body-color: #f1f1f1;
+
+    --font-text: 'Montserrat', sans-serif;
+    --color-01: #2ec5b6;
+    --color-02: #1d7d73;
+    
+}
+
+body {
+    background-color: var(--body-color);
+    font-family: var(--font-text);
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.container {
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+
+ul {
+    list-style: none;
+}
+
+.flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header {
+    justify-content: space-between;
+    align-items: center;
+    
+    padding: 1rem;
+    font-size: 1.2rem;
+    border-bottom: 1px solid var(--color-01);
+}
+
+nav .logo {
+    font-weight: 800;
+}
+
+nav a.logo {
+    color: #000;
+}
+
+nav .logo span {
+    margin-left: 5px;
+    color: var(--color-01);
+}
+
+nav .logo p {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+nav .menu ul {
+    display: flex;
+    
+    gap: 2rem;
+}
+
+div.menu a {
+    display: block;
+    padding: 0.5rem;
+    color: var(--color-01);
+    font-size: 1.2rem;
+}
+
+div.menu a:hover {
+    display: block;
+    background-color: var(--color-01);
+    color: var(--body-color);
+    border-radius: 4px;
+    transition: 0.8s;
+}
+
+#main {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+div.image img {
+    display: flex;
+    width: 600px;
+    margin: 0;
+    padding: 0;
+}
+
+div h1.title {
+    color: var(--color-02);
+    font-weight: 800;
+    font-size: 2rem;
+    text-align: start;
+    margin-top: 0;
+    margin-left: 50px;
+}
+
+div p.text {
+    text-align: justify;
+    font-weight: 300;
+    font-size: 1.5rem;
+    margin-top: 20px;
+    margin-left: 50px;
 }
