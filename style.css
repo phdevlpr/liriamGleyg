@@ -21,6 +21,7 @@ a {
     --font-text: 'Montserrat', sans-serif;
     --color-01: #2ec5b6;
     --color-02: #1d7d73;
+    --dark-gray: #222;
     
 }
 
@@ -99,7 +100,11 @@ div.menu a:hover {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
-    margin-top: 30px;
+    margin-top: 10px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--color-02);
 }
 
 div.image img {
@@ -112,16 +117,33 @@ div.image img {
 div h1.title {
     color: var(--color-02);
     font-weight: 800;
-    font-size: 2rem;
+    font-size: 1.5rem;
     text-align: start;
     margin-top: 0;
     margin-left: 50px;
 }
 
 div p.text {
+    color: var(--dark-gray);
     text-align: justify;
     font-weight: 300;
     font-size: 1.5rem;
     margin-top: 20px;
     margin-left: 50px;
+    margin-bottom: 20px;
+}
+
+a.button {
+    color: var(--body-color);
+    background-color: var(--color-02);
+    border-radius: 4px;
+    font-size: 1rem;
+    margin-left: 50px;
+    padding: 10px;
+}
+
+a.button:hover {
+    background-color: var(--color-01);
+    transition: 0.8s;
+    box-shadow: 0 0 5px var(--dark-gray);
 }
