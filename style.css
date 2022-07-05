@@ -344,7 +344,7 @@ div.contact-area img.logo {
 
 div.contact-area a {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 
   text-decoration: none;
@@ -388,14 +388,22 @@ footer p a:hover {
 
 /* Media Queries */
 
-@media (max-width: 1023px) {
+@media (max-width: 1024px) {
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
   #header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 30px;
-    width: 100vh;
+    max-width: 1020px;
     padding: 5px;
   }
 
@@ -427,17 +435,31 @@ footer p a:hover {
   #main {
     justify-content: space-between;
     align-items: center;
-    gap: 2rem;
-    margin-left: 2rem;
-    margin-right: 2rem;
+    max-width: 1000px;
+    gap: 0.5rem;
+    margin-left: 0;
+    margin-right: 0;
   }
+
+  #main div.text-main {
+    max-width: 300px;
+  }
+
 
   #main div.text-main h1 {
-    font-size: clamp(3em, 5em + 1vw, 6em);
+    max-width: auto;
+    font-size: 5rem;
   }
 
+  #main div.text-main p {
+    font-size: 1rem;
+  }
+
+
   #main div.image img {
+    
     max-width: 500px;
+    margin: 0;
     
   }
 
@@ -459,7 +481,7 @@ footer p a:hover {
   }
 
   #about div.image img {
-    width: 500px;
+    width: 300px;
   }
 
   div.text-main h1.title {
@@ -476,6 +498,11 @@ footer p a:hover {
     align-items: center;
     margin-left: 2rem;
     margin-right: 2rem;
+  }
+
+  div.contact-area {
+    justify-content: flex-end;
+    align-items: center;
   }
 
   #contact h1 {
@@ -511,13 +538,14 @@ footer p a:hover {
   }
 
   #main div.text-main h1 {
+    max-width: 100%;
     text-align: center;
-    font-size: 8rem;
+    font-size: 5rem;
   }
   
   #main div.text-main p {
     text-align: center;
-    font-size: clamp(1em, 1em + 1vw, 1.5em);
+    font-size: 1rem;
   }
 
   #about {
@@ -526,8 +554,17 @@ footer p a:hover {
   }
 
   #about div.image img {
+    width: 100%;
     border-radius: 250px;
     box-shadow: var(--color-01) 0 0 10px;
+  }
+  
+  #about h1.title {
+    font-size: 2rem;
+  }
+
+  #about div p.text {
+    font-size: 1.5rem;
   }
 
   #about div.button {
@@ -580,6 +617,12 @@ footer p a:hover {
     margin: 0;
   }
 
+  div.contact-text p {
+    font-size: 1rem;
+    text-align: center;
+    margin: 0;
+  }
+
   #contact div.button {
     display: flex;
     justify-content: center;
@@ -593,10 +636,18 @@ footer p a:hover {
     display: none;
   }  
 
+  footer {
+    height: 100px;
+  }
 
+  footer p {
+    text-align: center;
+    font-size: 1.5rem;
+  }
 
-
-
+  footer p.p1 {
+    display: none;
+  }
 
 
 
