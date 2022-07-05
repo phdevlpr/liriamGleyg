@@ -125,6 +125,10 @@ nav .logo p {
   font-weight: 400;
 }
 
+.btn-mobile {
+  display: none;
+}
+
 nav ul {
   display: flex;
   justify-content: flex-end;
@@ -274,7 +278,9 @@ div.button a:hover {
 div.cards {
   display: flex;
   justify-content: center;
-  margin-top: 30px;
+  align-items: center;
+  gap: 10rem;
+  margin-top: 50px;
   margin-bottom: 30px;
 }
 
@@ -284,8 +290,6 @@ div.icons {
   padding: 20px;
   box-shadow: 3px 0 5px var(--dark-gray);
   border-radius: 1rem;
-
-  margin: 50px;
 }
 
 div.icons img {
@@ -576,8 +580,17 @@ footer p a:hover {
     margin-top: 20px;
   }
 
-  #services .div.icons {
-    max-width: 100px;
+  #services div.cards {
+    
+    gap: 2rem;
+  }
+
+  #services div.icons {
+    width: 100px;
+  }
+
+  #services div.icons h1 {
+    font-size: 1rem;
   }
 
   #contact {
@@ -595,6 +608,10 @@ footer p a:hover {
     align-items: center;
     max-width: 500px;
     margin-top: 5px;
+  }
+
+  #contact img.logo {
+    max-width: 300px;
   }
 
   div.contact-area a img {
@@ -642,7 +659,7 @@ footer p a:hover {
 
   footer p {
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
 
   footer p.p1 {
