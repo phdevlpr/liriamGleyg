@@ -16,6 +16,10 @@ a {
   text-decoration: none;
 }
 
+ul {
+  list-style: none;
+}
+
 :root {
   --header-height: 4rem 4rem;
 
@@ -66,18 +70,15 @@ body {
 }
 
 .container {
-  margin-left: 1rem;
-  margin-right: 1rem;
-}
-
-ul {
-  list-style: none;
+  max-width: 1536px;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .flex {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 
@@ -85,14 +86,12 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100vh;
+  max-width: 100vh;
   height: 60px;
-  font-size: 1.2rem;
-  
 }
 
 section {
-  padding: 4.5rem 0 4.5rem 0;
+  padding: 5rem 0 5rem 0;
 }
 
 nav {
@@ -128,7 +127,8 @@ nav .logo p {
 
 nav ul {
   display: flex;
-  margin-right: 20px;
+  justify-content: flex-end;
+  margin-right: 1.5rem;
   gap: 2rem;
 }
 
@@ -140,15 +140,16 @@ nav ul a  {
 }
 
 nav ul a:hover {
-  display: block;
   background-color: var(--color-01);
   color: var(--body-color);
   border-radius: 4px;
   transition: 0.8s;
 }
 
-.title {
-    color: var(--color-02);
+a.title {
+  padding: 5px;
+  font-size: 1.2rem;  
+  color: var(--color-02);
 }
 
 div.flex {
@@ -164,6 +165,8 @@ div.flex {
   justify-content: space-between;
   align-items:center;
   margin-bottom: 100px;
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
 
 #main div.image img {
@@ -196,29 +199,30 @@ div.text-main h1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 30px 100px 30px;
-  border-top: 1px solid var(--body-color);
+  padding: 0;
+  gap: 2rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
 
 #about div.text-main {
   display: flex;
   flex-direction: column;
-  width: 100vh;
-  margin: 0;
 }
 
 div h1.title {
   color: var(--color-02);
   font-weight: 800;
   font-size: clamp(1em, 1em + 1vw, 1.5em);
-  margin-left: 50px;
   margin-bottom: 10px;
 }
 
 div.text-main {
   margin-top: 40px;
-  margin-left: 2rem;
-  margin-right: 2rem;
+}
+
+#about h1 {
+  margin-left: 0;
 }
 
 #about div p.text {
@@ -230,7 +234,6 @@ div.text-main {
   margin-right: 0;
   margin-top: 0;
   margin-bottom: 5px;
-  width: 100%;
 }
 
 div.button a {
@@ -252,14 +255,8 @@ div.button a:hover {
   box-shadow: 0 0 5px var(--dark-gray);
 }
 
-#about h1 {
-  margin-left: 0;
-}
-
 #about div img {
   max-width: 500px;
-  margin-left: 100px;
-  margin-right: 0px;
   border-radius: 10px;
 }
 
@@ -270,6 +267,8 @@ div.button a:hover {
 
 #services h1.title {
   text-align: center;
+  font-weight: 400;
+  color: var(--color-02);
 }
 
 div.cards {
@@ -302,15 +301,13 @@ div.icons h1 {
 
 #contact {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
  
   margin-top: 50px;
   margin-bottom: 50px;
-}
-
-div.contact-text {
-  margin-right: 30px;
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
 
 div.contact-text h1 {
@@ -339,11 +336,10 @@ div.contact-area {
   align-items: flex-start;
   max-width: 500px;
   margin-top: 5px;
-  margin-left: 100px;
 }
 
 div.contact-area img.logo {
-  width: 500px
+  width: 500px;
 }
 
 div.contact-area a {
@@ -390,3 +386,218 @@ footer p a:hover {
 }
 
 
+/* Media Queries */
+
+@media (max-width: 1023px) {
+
+  #header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 30px;
+    width: 100vh;
+    padding: 5px;
+  }
+
+  #header a {
+    width: 100%;
+    display: block;
+    font-size: 1rem;
+  }
+
+  #header p {
+    font-size: 0.8rem;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+  }
+
+  nav ul {
+    display: flex;
+    width: 100%;
+  }
+
+  nav ul a:hover {
+    display: none;
+  }
+
+  #main {
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
+  #main div.text-main h1 {
+    font-size: clamp(3em, 5em + 1vw, 6em);
+  }
+
+  #main div.image img {
+    max-width: 500px;
+    
+  }
+
+  #about {
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+    gap: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  div.text-main {
+    font-size: 0.7rem;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    width: 100%;
+  }
+
+  #about div.image img {
+    width: 500px;
+  }
+
+  div.text-main h1.title {
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  div.button {
+    width: 100%;
+  }
+
+  #contact {
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
+  #contact h1 {
+    font-size: clamp(1em, 1em + 1vw, 3em);
+  }
+
+  #contact img.logo {
+    margin: 0;
+    width: 400px;
+  }
+
+  #contact a {
+    font-size: clamp(0.8em, 0.8em + 1vw, 1em);
+  }
+
+}
+
+@media (max-width: 767px) {
+  .container {
+    max-width: 730px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #main {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #main div.image img {
+    display: none;
+  }
+
+  #main div.text-main h1 {
+    text-align: center;
+    font-size: 8rem;
+  }
+  
+  #main div.text-main p {
+    text-align: center;
+    font-size: clamp(1em, 1em + 1vw, 1.5em);
+  }
+
+  #about {
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+
+  #about div.image img {
+    border-radius: 250px;
+    box-shadow: var(--color-01) 0 0 10px;
+  }
+
+  #about div.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  #services .div.icons {
+    max-width: 100px;
+  }
+
+  #contact {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
+  div.contact-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 500px;
+    margin-top: 5px;
+  }
+
+  div.contact-area a img {
+    margin: 0;
+  }
+  
+  div.social-icons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+ 
+    
+  div.contact-text h1 {
+    text-align: center;
+    margin: 0;
+  }
+
+  #contact div.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  div.contact-area a p {
+    display: none;
+  }  
+
+
+
+
+
+
+
+
+}
