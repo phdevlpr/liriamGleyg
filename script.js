@@ -42,3 +42,10 @@ function toggleMenu(event) {
 
 btnMobile.addEventListener('click', toggleMenu);
 btnMobile.addEventListener('touchstart', toggleMenu);
+
+document.querySelectorAll('.links').forEach(function (links) {
+    links.addEventListener('click', function () {
+        nav.classList.remove('active');
+    });
+})
+

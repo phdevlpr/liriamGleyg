@@ -130,13 +130,13 @@ section {
 }
 
 
-a.title {
+li a.links {
   padding: 5px;
   font-size: 1.2rem;  
   color: var(--color-02);
 }
 
-a.title:hover {
+li a.links:hover {
   background-color: var(--color-01);
   color: var(--body-color);
   border-radius: 4px;
@@ -395,7 +395,7 @@ footer p a:hover {
   }
 
   #header a {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 
   #header a.logo p {
@@ -464,10 +464,17 @@ footer p a:hover {
     overflow-y: auto;
   }
 
-  #menu a.title {
+  #menu li a.links {
     padding: 1rem 0;
     margin: 0 1rem;
     font-size: 1.5rem;
+    border-bottom: 1px solid var(--color-01);
+  }
+
+  #menu li a.links:hover {
+    background-color: var(--body-color);
+    color: var(--color-02);
+   
   }
 
   #menu li {
@@ -567,6 +574,10 @@ footer p a:hover {
     max-width: 730px;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  #header a.logo p {
+    font-size: 0.5rem;
   }
 
   #main {
