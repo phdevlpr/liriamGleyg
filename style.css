@@ -82,78 +82,65 @@ body {
   align-items: center;
 }
 
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 100vh;
-  height: 60px;
-}
+
 
 section {
   padding: 5rem 0 5rem 0;
 }
 
-nav {
+#header {
+  box-sizing: border-box;
+  height: 60px;
+  padding: 1rem;
+  width: 100%;
+  position: fixed;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
+  z-index: 1;
   background-color: var(--body-color);
   border-bottom: 1px solid var(--color-01);
-  width: 100%;
-  z-index: 1;
-  position: fixed;
 }
 
-nav .logo {
+#header a.logo {
   font-weight: 800;
   margin-left: 20px;
-}
-
-nav a.logo {
   color: #000;
 }
 
-nav .logo span {
+#header .logo span {
   margin-left: 5px;
   color: var(--color-01);
 }
 
-nav .logo p {
+#header .logo p {
   font-size: 1rem;
   font-weight: 400;
 }
 
-.btn-mobile {
+#btn-mobile {
   display: none;
 }
 
-nav ul {
+
+#menu {
   display: flex;
-  justify-content: flex-end;
-  margin-right: 1.5rem;
+  padding: 10px;
   gap: 2rem;
 }
 
-nav ul a  {
-  display: block;
-  padding: 0.5rem;
-  color: var(--color-01);
-  font-size: 1.2rem;
-}
-
-nav ul a:hover {
-  background-color: var(--color-01);
-  color: var(--body-color);
-  border-radius: 4px;
-  transition: 0.8s;
-}
 
 a.title {
   padding: 5px;
   font-size: 1.2rem;  
   color: var(--color-02);
+}
+
+a.title:hover {
+  background-color: var(--color-01);
+  color: var(--body-color);
+  border-radius: 4px;
+  transition: 0.8s;
 }
 
 div.flex {
@@ -403,37 +390,88 @@ footer p a:hover {
   }
 
   #header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     height: 30px;
-    max-width: 1020px;
-    padding: 5px;
+   
   }
 
   #header a {
-    width: 100%;
-    display: block;
-    font-size: 1rem;
-  }
-
-  #header p {
     font-size: 0.8rem;
   }
 
-  nav {
-    display: flex;
-    justify-content: space-between;
-    padding: 5px;
+  #header a.logo p {
+    font-size: 0.6rem;
+  
   }
 
-  nav ul {
+  #btn-mobile {
     display: flex;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    background: none;
+    cursor:pointer;
+    gap: 0.5rem;
+  }
+
+  #hamburger {
+    display: block;
+    width: 20px;
+    border-top: 2px solid var(--color-02);
+  }
+
+  #hamburger::after, #hamburger::before {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: var(--color-02);
+    margin-top: 5px;
+    transition: .3s;
+    position: relative;
+  }
+
+  #nav.active #hamburger {
+    border-top-color: transparent; 
+  }
+
+  #nav.active #hamburger::before {
+    transform: rotate(135deg);
+  }
+
+  #nav.active #hamburger::after {
+    transform: rotate(-135deg);
+    top: -7px;
+  }
+
+  #menu {
+    display: block;
+    position: absolute;
     width: 100%;
+    top: 30px;
+    right: 0px;
+    background: var(--body-color);
+    text-align: center;
+    height: 0px;
+    visibility: hidden;
+    z-index: 1000;
+    transition: .6s;
+    overflow-y: hidden;
   }
 
-  nav ul a:hover {
-    display: none;
+  #nav.active #menu{
+    height: calc(100vh - 30px);
+    visibility: visible;
+    overflow-y: auto;
+  }
+
+  #menu a.title {
+    padding: 1rem 0;
+    margin: 0 1rem;
+    font-size: 1.5rem;
+  }
+
+  #menu li {
+    margin-top: 50px;
   }
 
   #main {
