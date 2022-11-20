@@ -630,8 +630,13 @@ footer p a:hover {
     margin-top: 20px;
   }
 
+  #about div.button a {
+    text-align: center;
+  }
+
   #services div.cards {
-    
+    margin-left: 1rem;
+    margin-right: 1rem;
     gap: 2rem;
   }
 
@@ -697,6 +702,10 @@ footer p a:hover {
     flex-direction: column;
     width: 100vw;
     margin-top: 20px;
+  }
+  
+  #contact div.button a {
+    text-align: center;
   }
 
   div.contact-area a p {
