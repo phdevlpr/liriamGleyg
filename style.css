@@ -93,6 +93,7 @@ section {
   box-sizing: border-box;
   height: 60px;
   padding: 1rem;
+  margin: 0;
   width: 100%;
   position: fixed;
   display: flex;
@@ -156,8 +157,9 @@ div.flex {
   display: flex;
   justify-content: space-between;
   align-items:center;
-  margin-top: 10rem;
-  margin-bottom: 10rem;
+  scroll-padding-top:initial;
+  padding-top: 15rem;
+  padding-bottom: 15rem;
   margin-left: 2rem;
   margin-right: 2rem;
 }
@@ -199,7 +201,8 @@ div.text-main h1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0;
+  padding-top: 10rem;
+  padding-bottom: 15rem;
   gap: 2rem;
   margin-left: 2rem;
   margin-right: 2rem;
@@ -271,7 +274,8 @@ div.button a:hover {
 }
 
 #services {
-  margin-top: 30px;
+  padding-top: 15rem;
+  padding-bottom: 15rem;
   border-bottom: 1px solid var(--color-01);
 }
 
@@ -632,8 +636,8 @@ footer p a:hover {
 
   #about div.image img {
     width: 100%;
-    border-radius: 250px;
-    box-shadow: var(--color-01) 0 0 10px;
+    border-radius: 1rem;
+    box-shadow: var(--dark-gray) 0 0 10px;
   }
   
   #about h1.title {
@@ -642,6 +646,18 @@ footer p a:hover {
 
   #about div p.text {
     font-size: 1.5rem;
+  }
+
+  #about h1#gestalt-title.title {
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-align: center;
+    width: auto;
+    color: var(--body-color);
+    background-color: var(--color-02);
+
+    padding: 0.5rem;
+    border-radius: 0.2rem;
   }
 
   #about div.button {
