@@ -237,11 +237,9 @@ div.text-main {
   margin-bottom: 2rem;
 }
 
-h1#gestalt.title {
- 
-  color: var(--color-02);
+h1#gestalt-title.title {
   width: 34%;
-  border-bottom: 0.3rem solid var(--color-02);
+  border-bottom: 0.1rem solid var(--color-02);
 }
 
 p#gestalt-text.text {
@@ -557,6 +555,11 @@ footer p a:hover {
   div.text-main h1.title {
     text-align: center;
     margin-top: 30px;
+  }
+
+  #about h1#gestalt-title.title {
+    font-size: 1.3rem;
+    border-bottom: none;
   }
 
   div.button {
