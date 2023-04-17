@@ -175,7 +175,6 @@ div.text-main h1 {
   font-size: 10rem;
   font-weight: 800;
   color: var(--color-02);
-  
 }
 
 #main h1 {
@@ -276,13 +275,18 @@ div.button a:hover {
 #services {
   padding-top: 15rem;
   padding-bottom: 15rem;
-  border-bottom: 1px solid var(--color-01);
 }
 
 #services h1.title {
+  
   text-align: center;
   font-weight: 400;
-  color: var(--color-02);
+  background-color: var(--color-02);
+  color: var(--body-color);
+  border-radius: 0.5rem;
+
+  margin-left: 25rem;
+  margin-right: 25rem;
 }
 
 div.cards {
@@ -295,10 +299,10 @@ div.cards {
 }
 
 div.icons {
-  background-color: rgb(241, 241, 241);
+  background-color: var(--body-color);
   width: 200px;
   padding: 20px;
-  box-shadow: 3px 0 5px var(--dark-gray);
+  box-shadow: 3px 2px 8px var(--dark-gray);
   border-radius: 1rem;
 }
 
@@ -313,13 +317,42 @@ div.icons h1 {
   color: var(--color-02);
 }
 
+div.sub-cards {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 200px;
+
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+
+  gap: 2rem;
+  
+}
+
+div.sub-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-01);
+  width: 100px;
+  padding: 2rem 6rem;
+  
+  gap: 1rem;
+  border-radius: 1rem;
+}
+
+div.sub-icons img {
+  width: 100px;
+}
+
 #contact {
   display: flex;
   justify-content: space-between;
   align-items: center;
  
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin-top: 15rem;
+  margin-bottom: 10rem;
   margin-left: 2rem;
   margin-right: 2rem;
 }
@@ -408,8 +441,8 @@ footer p a:hover {
     display: flex;
     flex-direction: column;
     max-width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
 
   #header {
@@ -505,22 +538,21 @@ footer p a:hover {
   }
 
   #main {
-    justify-content: space-between;
+    display: flex;
+    justify-content:space-between;
     align-items: center;
-    max-width: 1000px;
-    gap: 0.5rem;
-    margin-left: 0;
-    margin-right: 0;
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
 
   #main div.text-main {
-    max-width: 300px;
+    max-width: 200px;
   }
 
 
   #main div.text-main h1 {
-    max-width: auto;
-    font-size: 5rem;
+    max-width: 800px;
+    font-size: 4rem;
   }
 
   #main div.text-main p {
@@ -529,9 +561,7 @@ footer p a:hover {
 
 
   #main div.image img {
-    
-    max-width: 500px;
-    margin: 0;
+    max-width: 400px;
     
   }
 
