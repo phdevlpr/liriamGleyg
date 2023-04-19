@@ -36,7 +36,7 @@ ul {
 /* SCROLL ANIMATION */
 [data-anime] {
   opacity: 0;
-  transition: 1s;
+  transition: 1.3s;
 }
 
 [data-anime="down"] {
@@ -225,7 +225,6 @@ div.text-main {
 
 #about h1 {
   font-size: 2rem;
-  margin-left: 0;
 }
 
 #about div p.text {
@@ -290,34 +289,6 @@ div.button a:hover {
 }
 
 div.cards {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10rem;
-  margin-top: 50px;
-  margin-bottom: 30px;
-}
-
-div.icons {
-  background-color: var(--body-color);
-  width: 200px;
-  padding: 20px;
-  box-shadow: 3px 2px 8px var(--dark-gray);
-  border-radius: 1rem;
-}
-
-div.icons img {
-  padding: 20px;
-  border-radius: 1rem;
-}
-
-div.icons h1 {
-  margin-top: 20px;
-  text-align: center;
-  color: var(--color-02);
-}
-
-div.sub-cards {
   display: grid;
   justify-items: center;
   grid-template-columns: repeat(3, 1fr);
@@ -330,19 +301,21 @@ div.sub-cards {
   
 }
 
-div.sub-icons {
+div.icons {
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: var(--color-01);
   width: 100px;
   padding: 2rem 6rem;
+
+  box-shadow: 2px 2px 5px var(--color-02);
   
   gap: 1rem;
   border-radius: 1rem;
 }
 
-div.sub-icons img {
+div.icons img {
   width: 100px;
 }
 
@@ -434,6 +407,36 @@ footer p a:hover {
 
 
 /* Media Queries */
+
+@media (max-width: 1536px) {
+
+  #main, #about, #services, #contact {
+    padding-top: 7rem;
+    padding-bottom: 6rem;
+  }
+
+  #about {
+    justify-content: center;
+    align-items: center;
+  }
+
+  #about h1.title {
+    font-size: 1.5rem;
+  }
+
+  #about div.text-main {
+    font-size: 0.8rem;
+  }
+
+  #about div.text-main {
+    max-width: 50vw;
+  }
+
+  #about div.image img {
+    max-width: 25vw;
+    margin: 0;
+  }
+}
 
 @media (max-width: 1024px) {
 
