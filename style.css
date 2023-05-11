@@ -68,33 +68,30 @@ body {
   font-weight: 400;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
+  margin: 0;
+  padding: 0;
 }
 
 .container {
-  max-width: 1536px;
+  width: 1366px;
   height: auto;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
+  padding: 0;
+  
 }
 
 .flex {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-}
-
-
-
-section {
-  padding: 5rem 0 5rem 0;
 }
 
 #header {
   box-sizing: border-box;
-  height: 60px;
+  height: 4rem;
   padding: 1rem;
   margin: 0;
-  width: 100%;
+  width: 100vw;
   position: fixed;
   display: flex;
   justify-content: space-between;
@@ -147,39 +144,35 @@ li a.links:hover {
 
 div.flex {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
   margin-bottom: 30px;
 }
 
-#main {
-  display: flex;
-  justify-content: space-between;
-  align-items:center;
-  scroll-padding-top:initial;
-  padding-top: 15rem;
-  padding-bottom: 15rem;
+section {
   margin-left: 2rem;
   margin-right: 2rem;
+  padding: 8rem 0 8rem 0;
+}
+
+#main {
+  padding-top: 10rem;
+  gap: 5rem;
 }
 
 #main div.image img {
   display: flex;
-  width: 800px;
+  width: 40vw;
   border-radius: 1rem;
-  box-shadow: 0.2rem 0.3rem 0.5rem #7d7d7d;
+  box-shadow: 0.2rem 0.3rem 0.5rem var(--light-gray);
 }
 
 div.text-main h1 {
-  font-size: 10rem;
-  font-weight: 800;
-  color: var(--color-02);
-}
-
-#main h1 {
-  color: var(--light-gray);
   display: grid;
+  font-size: clamp(6rem, 8vw, 8rem);
+  font-weight: 800;
+  color: var(--light-gray);
   margin: 0;
   padding: 0;
 }
@@ -192,19 +185,13 @@ div.text-main h1 {
 
 #main p {
   color: var(--dark-gray);
-  font-size: 1.2rem;
+  font-size: clamp(0.2rem, 2vw, 1.5rem);
   margin-top: 20px;
 }
 
 #about {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 10rem;
-  padding-bottom: 15rem;
-  gap: 2rem;
-  margin-left: 2rem;
-  margin-right: 2rem;
+  gap: 5rem;
+  padding-bottom: 20rem;
 }
 
 #about div.text-main {
@@ -219,32 +206,26 @@ div h1.title {
   margin-bottom: 10px;
 }
 
-div.text-main {
-  margin-top: 40px;
-}
-
 #about h1 {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 #about div p.text {
   display: flex;
-  
   text-align: justify;
   font-weight: 400;
-  font-size: clamp(1em, 1em + 1vw, 1.5em);
-  margin-right: 0;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  font-size: clamp(1rem, 1rem + .1vw, 1.5rem);
 }
 
 h1#gestalt-title.title {
-  width: 34%;
+  width: 25%;
   border-bottom: 0.1rem solid var(--color-02);
+  margin-top: 1rem;
 }
 
 p#gestalt-text.text {
   color: var(--light-gray);
+  margin: 1rem 0 1rem 0;
 }
 
 div.button a {
@@ -267,13 +248,8 @@ div.button a:hover {
 }
 
 #about div img {
-  max-width: 500px;
+  max-width: 25vw;
   border-radius: 10px;
-}
-
-#services {
-  padding-top: 15rem;
-  padding-bottom: 15rem;
 }
 
 #services h1.title {
@@ -320,20 +296,13 @@ div.icons img {
 }
 
 #contact {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
- 
-  margin-top: 15rem;
-  margin-bottom: 10rem;
-  margin-left: 2rem;
-  margin-right: 2rem;
+  gap: 3rem;
 }
 
 div.contact-text h1 {
   color: var(--color-02);
   font-weight: 800;
-  font-size: clamp(3em, 3em + 1vw, 3.5em);
+  font-size: clamp(2rem, 2rem + 1vw, 3rem);
   margin-bottom: 30px;
 }
 
@@ -344,9 +313,8 @@ div.contact-text p {
 }
 
 #contact div.button a {
-  margin-top: 20px;
+  margin-top: 1.5rem;
   width: 30vh;
-  margin-bottom: 50px;
 }
 
 div.contact-area {
@@ -354,12 +322,10 @@ div.contact-area {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  max-width: 500px;
-  margin-top: 5px;
 }
 
 div.contact-area img.logo {
-  width: 500px;
+  width: 30vw;
 }
 
 div.contact-area a {
@@ -371,18 +337,15 @@ div.contact-area a {
   text-align: left;
   color: var(--color-02);
 
-  margin-top: 15px;
+  margin-top: 1rem;
 }
 
 div.contact-area a img {
-  width: 30px;
+  width: 1.5rem;
   margin-right: 10px;
 }
 
-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+footer { 
   width: auto;
   height: 50px;
   background-color: var(--color-01);
@@ -401,18 +364,34 @@ footer p a {
   color: var(--dark-gray);
 }
 
-footer p a:hover {
-  font-size: 1.1rem;
-}
-
 
 /* Media Queries */
 
-@media (max-width: 1536px) {
+@media (min-width: 992px) and (max-width: 1199px) {
+
+  section {
+    max-width: 1024px;
+  }
 
   #main, #about, #services, #contact {
-    padding-top: 7rem;
-    padding-bottom: 6rem;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+  }
+
+  div.image #image-main {
+    max-width: 50vw;
+  }
+
+ 
+
+  #main div.text-main h1 {
+    
+    font-size: clamp(1rem, 8vw, 8rem);
+
+  }
+
+  #main div.text-main p {
+    font-size: clamp(0.5rem, 1.5vw, 1.5rem);
   }
 
   #about {
@@ -425,7 +404,7 @@ footer p a:hover {
   }
 
   #about div.text-main {
-    font-size: 0.8rem;
+    font-size: clamp(0.5rem, 0.8vw, 0.8rem);
   }
 
   #about div.text-main {
@@ -433,20 +412,12 @@ footer p a:hover {
   }
 
   #about div.image img {
-    max-width: 25vw;
+    max-width: 40vw;
     margin: 0;
   }
 }
 
-@media (max-width: 1024px) {
-
-  .container {
-    display: flex;
-    flex-direction: column;
-    max-width: 1000px;
-    margin-left: 1rem;
-    margin-right: 1rem;
-  }
+@media (max-width: 768px) {
 
   #header {
     height: 30px;
@@ -540,14 +511,6 @@ footer p a:hover {
     margin-top: 50px;
   }
 
-  #main {
-    display: flex;
-    justify-content:space-between;
-    align-items: center;
-    margin-left: 1rem;
-    margin-right: 1rem;
-  }
-
   #main div.text-main {
     max-width: 200px;
   }
@@ -568,15 +531,6 @@ footer p a:hover {
     
   }
 
-  #about {
-    justify-content: center;
-    align-items: center;
-    flex-direction: row-reverse;
-    gap: 1rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
-  }
-
   div.text-main {
     font-size: 0.7rem;
     justify-content: center;
@@ -585,13 +539,25 @@ footer p a:hover {
     width: 100%;
   }
 
-  #about div.image img {
-    width: 300px;
-  }
-
   div.text-main h1.title {
     text-align: center;
     margin-top: 30px;
+  }
+
+  #about {
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+    gap: 1rem;
+  }
+
+  #about div.image img {
+    width: 300px;
+    
+  }
+
+  #about div.text-main p.text {
+    font-size: 1rem;
   }
 
   #about h1#gestalt-title.title {
@@ -630,7 +596,7 @@ footer p a:hover {
 
 }
 
-@media (max-width: 767px) {
+/*@media (max-width: 767px) {
   .container {
     max-width: 730px;
     margin-left: auto;
