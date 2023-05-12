@@ -391,12 +391,12 @@ footer p a {
     width: 40vw;
   }
 
-  div.cards {
+  #about div.cards {
     display: grid;
     justify-items: center;
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: 100px;
-    margin-top: 5rem;
+    margin-top: 2rem;
     gap: 5rem;
   }
   
@@ -612,7 +612,7 @@ footer p a {
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: 100px;
     gap: 2rem;
-    padding: 2rem;
+    padding: 1rem;
   }
 
   #services div.icons {
@@ -862,7 +862,7 @@ footer p a {
   }
 
   #services div.icons h2 {
-    font-size: .5rem;
+    font-size: .45rem;
   }
 
   #contact {
@@ -926,6 +926,6 @@ footer p a {
   }
 
   footer p {
-    font-size: 0.8rem;
+    font-size: 0.6rem;
   }
 }
