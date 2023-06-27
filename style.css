@@ -16,6 +16,18 @@ ul {
   list-style: none;
 }
 
+::-webkit-scrollbar {
+  width: .5rem;
+}
+::-webkit-scrollbar-track {
+  background-color: var(--body-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #a09f9f;
+  border-radius: 10px;
+}
+
 :root {
   --header-height: 4rem 4rem;
 
